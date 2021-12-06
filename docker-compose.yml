@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    tty: true
+    volumes:
+      - .pgdata:/var/lib/postgres/data
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=123
+    ports:
+      - "5434:5434"
